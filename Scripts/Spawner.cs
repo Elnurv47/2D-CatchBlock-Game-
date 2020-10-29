@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             int otherRandom = Random.Range(0, 10);
-            if (otherRandom == 1)
+            if (otherRandom == 1) // otherRandom has a %10 chance to be 1, so it will instantiate white block (which cause to increase score by 5) only 1 times per 10
             {
                 instantiatedObject = Instantiate(increaseScoreByFive);
                 instantiatedObject.transform.position = new Vector3(Random.Range(-2, 13), 14f, 0f);

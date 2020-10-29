@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class CatchBlock : MonoBehaviour
 {
     public int score = 0;
-    public int increase = 1;
+    private int increase = 1;
 
     public bool isDead;
 
@@ -24,7 +24,7 @@ public class CatchBlock : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("WhiteBlock"))
         {
-            StartCoroutine(IncreaseScore());
+            StartCoroutine(IncreaseScore());  //If we catch white block, score are increasing 5 per block for 20 seconds
         }
         if (collision.gameObject.CompareTag("RedBlock") && objectRenderer.material.color == Color.red
                 || collision.gameObject.CompareTag("GreenBlock") && objectRenderer.material.color == Color.green

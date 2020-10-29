@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
         if (isDead == true)
         {
             finishMenu.gameObject.SetActive(true);
-            move.enabled = false;
+            move.enabled = false; // this disables Move.cs script
             SetFinalScore();
         }
     }

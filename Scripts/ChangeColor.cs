@@ -18,7 +18,7 @@ public class ChangeColor : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(5); // this switch-case statements checks for color and change continuously
             switch (i)
             {
                 case 1:
