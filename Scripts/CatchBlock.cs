@@ -24,7 +24,11 @@ public class CatchBlock : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("WhiteBlock"))
         {
+<<<<<<< HEAD
             StartCoroutine(IncreaseScore());  //If we catch white block, score are increasing 5 per block for 20 seconds
+=======
+            StartCoroutine(IncreaseScore()); //If we catch white block, score are increasing 5 per block for 20 seconds
+>>>>>>> 487f410dc7c7a7d8853440c3a2bb12309a17f838
         }
         if (collision.gameObject.CompareTag("RedBlock") && objectRenderer.material.color == Color.red
                 || collision.gameObject.CompareTag("GreenBlock") && objectRenderer.material.color == Color.green
