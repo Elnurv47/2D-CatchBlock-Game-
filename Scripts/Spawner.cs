@@ -1,4 +1,4 @@
-﻿using JetBrains.Annotations;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
 
     GameObject[] blocks;
 
-    [SerializeField] GameObject increaseScoreByFive;
+    [SerializeField] GameObject whiteBlock;
     [SerializeField] GameObject redBlock;
     [SerializeField] GameObject greenBlock;
     [SerializeField] GameObject yellowBlock;
@@ -28,10 +28,10 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            int otherRandom = Random.Range(0, 10);
-            if (otherRandom == 1) // otherRandom has a %10 chance to be 1, so it will instantiate white block (which cause to increase score by 5) only 1 times per 10
+            int whiteBlockChance = Random.Range(0, 10);
+            if (whiteBlockChance == 1) // whiteBlockChance has a %10 chance to be 1, so it will instantiate white block (which cause to increase score by 5) only 1 times per 10
             {
-                instantiatedObject = Instantiate(increaseScoreByFive);
+                instantiatedObject = Instantiate(whiteBlock);
                 instantiatedObject.transform.position = new Vector3(Random.Range(-2, 13), 14f, 0f);
             }
             else
